@@ -4,11 +4,7 @@ let showSex = true
 
 function Example2() {
     const [age, setAge] = useState(18)//default值
-    if (showSex) {
-        const [sex, setSex] = useState("男")
-        showSex = false
-    }
-
+    const [sex, setSex] = useState("男")
     const [work, setWork] = useState("前端程序员")
 
     return (
