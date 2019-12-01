@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Example extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: 0
-        }
-    }
-    render() {
-        return (
-            <div>
-                <p>You clickd {this.state.count} times</p>
-                <button onClick={this.addCount.bind(this)}>CLick Me</button>
-            </div>
-        );
-    }
+function Example() {
+    const [count, setCount] = useState(0)
 
-    addCount() {
-        this.setState({
-            count: this.state.count + 1
-        })
-    }
+    return (
+        <div>
+            <p> You click {count} tims</p>
+            <button onClick={() => {
+                setCount(count + 1)
+            }
+            }>
+                Click Me
+          </button>
+        </div>
+    )
 }
 
 export default Example;
